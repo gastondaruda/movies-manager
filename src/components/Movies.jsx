@@ -1,8 +1,9 @@
 import { ToastContainer, toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from 'react-bootstrap';
 
-const Movies = ({number, name, plataform, handleDelete}) => {
+const Movies = ({id,number, name, plataform, handleDelete}) => {
     const notify = () => toast("updating...!");
 
 
@@ -12,7 +13,9 @@ const Movies = ({number, name, plataform, handleDelete}) => {
             <td className="font-weight-bold">{name}</td>
             <td>{plataform}</td>
             <td>
-                <Button variant="success" onClick={notify}>Update</Button>
+                <Link to={`/movieUpdate/${id}`}>
+                    <Button variant="success" onClick={notify}>Update</Button>
+                </Link>
             </td>
             <td>    
                 <Button variant="danger" onClick={handleDelete}>Delete</Button>

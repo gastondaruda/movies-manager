@@ -3,3 +3,12 @@
     padding: 3rem auto;
     box-sizing: border-box;
 }
+
+.form-container{
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem 0;
+    justify-content: center ;
+}
